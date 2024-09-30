@@ -1,0 +1,17 @@
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+  "beige": #fbeee5,
+  "peach": #f7dfbd,
+  "lightpeach": #ffe0b7,
+  "lightgolden": #f9cf93,
+  "dustyblue": #0e4c75,
+  "teal": #14463a,
+  "lightgrey": #f8f9fa,
+  "beans": #28130d,
+); // Added semicolon and removed trailing comma
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+// Importing Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";

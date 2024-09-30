@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link href="./css/main.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>Coffee</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-beans pb-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a
+          class="navbar-brand text-uppercase text-beige fw-bolder cof"
+          href="index.html"
+        >
+          <i class="bx bxs-coffee-togo coffee-icon"></i>
+          <span class="shop-text">Coffee Shop</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Coffee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#location">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+        <a class="btn btn-beige ms-3 text-beans fw-bolder px-3" href="#order"
+          >Order Now</a
+        >
+      </div>
+    </nav>
+
+    <section class="hero text-center text-dark py-5" style="position: relative">
+      <div class="container position-relative">
+        <h1
+          class="display-4 fw-bold text-beans text-shadow mb-4 animate-slide-in pt-4"
+        >
+          Welcome to Coffee Haven
+        </h1>
+        <p class="lead text-beige fs-2">
+          The perfect blend of taste and comfort, brewed just for you.
+        </p>
+        <a
+          href="#menu"
+          class="btn btn-beans btn-lg text-beige fw-bold mt-3 px-5"
+          >Explore Our Menu</a
+        >
+      </div>
+      <div class="hero-overlay"></div>
+    </section>
+
+    <section class="bg-beige py-5">
+      <div class="container">
+        <h2
+          class="text-center text-beans text-capitalize fw-bolder py-4"
+          id="menu"
+        >
+          Explore the Coffee World
+        </h2>
+        <p class="text-center text-teal fw-bold fs-3">
+          Here you can find our delicious coffee options!
+        </p>
+        <div class="row pt-5">
+          <div class="col-lg mb-4">
+            <div class="card shadow">
+              <img
+                src="./assets/Cappuccino.jpg"
+                class="card-img-top"
+                alt="Cappuccino."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bolder">Cappuccino</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="price fw-bold mb-0 fs-4">$8.50</p>
+                  <a href="#" class="btn btn-beige orderBtn">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg mb-4">
+            <div class="card shadow">
+              <img
+                src="./assets/espresso.webp"
+                class="card-img-top"
+                alt="Espresso"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bolder">Espresso</h5>
+                <p class="card-text">
+                  A concentrated coffee brewed by forcing a small amount of
+                  nearly boiling water through finely-ground coffee beans.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="price fw-bold mb-0 fs-4">$5.00</p>
+                  <a href="#" class="btn btn-beige orderBtn">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg mb-4">
+            <div class="card shadow">
+              <img src="./assets/Latte.jpg" class="card-img-top" alt="Latte" />
+              <div class="card-body">
+                <h5 class="card-title fw-bolder">Latte</h5>
+                <p class="card-text">
+                  A creamy blend of espresso and steamed milk, topped with light
+                  froth for a smooth and rich flavor experience.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="price fw-bold mb-0 fs-4">$6.00</p>
+                  <a href="#" class="btn btn-beige orderBtn">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg mb-4">
+            <div class="card shadow">
+              <img src="./assets/Mocha.jpg" class="card-img-top" alt="Mocha" />
+              <div class="card-body">
+                <h5 class="card-title fw-bolder">Mocha</h5>
+                <p class="card-text">
+                  A delightful blend of rich espresso and steamed milk, infused
+                  with chocolate for a sweet experience.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="price fw-bold mb-0 fs-4">$7.00</p>
+                  <a href="#" class="btn btn-beige orderBtn">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials bg-beans text-beige py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">What Our Customers Say</h2>
+        <div
+          id="testimonialsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p class="text-center">
+                "This is an amazing service. Highly recommend!" - Jack
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="text-center">
+                "Best cappuccino in town! I always start my mornings here." -
+                Sarah
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="text-center">
+                "Friendly staff, cozy vibes, and delicious espresso. Highly
+                recommended!" - Emma
+              </p>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bg-beige py-5">
+      <div class="container">
+        <h2 class="text-center text-beans text-capitalize fw-bolder py-4">
+          About Coffee shop
+        </h2>
+        <p class="text-center text-teal fw-bold fs-3">
+          Crafting the perfect cup, one bean at a time.
+        </p>
+        <div class="row">
+          <div class="col-md-6 pt-4">
+            <iframe
+              id="location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d388912.34805827367!2d-4.302981710937498!3d40.400482399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227fae7af7ee1%3A0xbb45d906954a8e3e!2sSanro%20take%20away%20Coffee%20bar%20bakery!5e0!3m2!1sen!2sdz!4v1727721273231!5m2!1sen!2sdz"
+              width="600"
+              height="350"
+              style="
+                border: 2px solid #28130d;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-md-6 pt-4">
+            <p class="text-beans fs-5" id="about">
+              At Coffee Haven, we believe that coffee is more than just a drink
+              – it's a way to connect, relax, and enjoy the moment. Since our
+              doors first opened, we've been committed to sourcing the highest
+              quality beans, crafting delicious brews, and creating a cozy space
+              where people can unwind. From the rich aroma of our espresso to
+              the delicate balance of our specialty drinks, every cup is made
+              with love and precision. Come in, grab a seat, and make yourself
+              at home. We're here to serve you the perfect cup.
+            </p>
+            <a href="#menu" class="btn btn-beans text-beige fw-bold mt-3">
+              Explore Our Menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-beans py-2 text-beige" id="contact">
+      <div class="container">
+        <h2 class="text-center text-beans fw-bolder">Contact Us</h2>
+        <p class="text-center fw-bolder fs-3">
+          For inquiries, please reach out!
+        </p>
+        <p class="text-center">📍 Address: 123 Coffee Lane, Coffee Town</p>
+        <p class="text-center">📞 Phone: (123) 456-7890</p>
+        <p class="text-center">✉️ Email: info@coffeeshop.com</p>
+      </div>
+    </section>
+
+    <footer class="text-center py-4 bg-beige text-">
+      <div class="container">
+        <p>Follow us on:</p>
+        <div class="social-icons">
+          <a href="#" class="icon">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="icon">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="#" class="icon">
+            <i class="bx bxl-instagram"></i>
+          </a>
+
+          <p>&copy; 2024 Coffee Haven. All rights reserved.</p>
+          <a class="ftr" href="#about">About Us</a> |
+          <a class="ftr" href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
