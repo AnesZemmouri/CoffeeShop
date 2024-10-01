@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-
     <link href="./css/main.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -16,19 +15,19 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <title>Coffee</title>
+    <title>Coffee Haven</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-light bg-beans pb-3">
       <div class="container d-flex justify-content-between align-items-center">
         <a
           class="navbar-brand text-uppercase text-beige fw-bolder cof"
-          href="index.html"
+          href="#"
         >
           <i class="bx bxs-coffee-togo coffee-icon"></i>
           <span class="shop-text">Coffee Shop</span>
         </a>
-
         <button
           class="navbar-toggler"
           type="button"
@@ -40,7 +39,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#menu">Coffee</a>
@@ -53,17 +52,82 @@
             </li>
           </ul>
         </div>
-        <a class="btn btn-beige ms-3 text-beans fw-bolder px-3" href="#order"
+        <a
+          class="btn btn-beige ms-3 text-beans fw-bolder px-3"
+          data-bs-toggle="modal"
+          data-bs-target="#order-modal"
+          href="#order"
           >Order Now</a
         >
       </div>
     </nav>
 
-    <section class="hero text-center text-dark py-5" style="position: relative">
+    <!-- Modal Section -->
+    <div class="modal fade" tabindex="-1" id="order-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Order A Coffee</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="tel"
+                      id="typePhone"
+                      class="form-control"
+                      placeholder="Enter your phone number"
+                    />
+                    <label class="form-label" for="typePhone"
+                      >Phone number</label
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="select"
+                      aria-label="Select a coffee"
+                    >
+                      <option selected disabled>Pick a Coffee</option>
+                      <option value="cappuccino">Cappuccino - $8.50</option>
+                      <option value="espresso">Espresso - $5.00</option>
+                      <option value="latte">Latte - $6.00</option>
+                      <option value="mocha">Mocha - $7.00</option>
+                    </select>
+                    <label for="select">Pick A Coffee</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-beans">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-dark py-5">
       <div class="container position-relative">
-        <h1
-          class="display-4 fw-bold text-beans text-shadow mb-4 animate-slide-in pt-4"
-        >
+        <h1 class="display-4 fw-bold text-beans text-shadow mb-4 pt-4">
           Welcome to Coffee Haven
         </h1>
         <p class="lead text-beige fs-2">
@@ -78,30 +142,29 @@
       <div class="hero-overlay"></div>
     </section>
 
-    <section class="bg-beige py-5">
+    <!-- Coffee Menu Section -->
+    <section class="bg-beige py-5" id="menu">
       <div class="container">
-        <h2
-          class="text-center text-beans text-capitalize fw-bolder py-4"
-          id="menu"
-        >
+        <h2 class="text-center text-beans text-capitalize fw-bolder py-4">
           Explore the Coffee World
         </h2>
         <p class="text-center text-teal fw-bold fs-3">
           Here you can find our delicious coffee options!
         </p>
         <div class="row pt-5">
-          <div class="col-lg mb-4">
+          <!-- Coffee Cards -->
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="card shadow">
               <img
                 src="./assets/Cappuccino.jpg"
                 class="card-img-top"
-                alt="Cappuccino."
+                alt="Cappuccino"
               />
               <div class="card-body">
                 <h5 class="card-title fw-bolder">Cappuccino</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  A delightful cappuccino experience with the perfect balance of
+                  coffee and froth.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="price fw-bold mb-0 fs-4">$8.50</p>
@@ -110,7 +173,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg mb-4">
+
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="card shadow">
               <img
                 src="./assets/espresso.webp"
@@ -120,8 +184,7 @@
               <div class="card-body">
                 <h5 class="card-title fw-bolder">Espresso</h5>
                 <p class="card-text">
-                  A concentrated coffee brewed by forcing a small amount of
-                  nearly boiling water through finely-ground coffee beans.
+                  A rich, intense shot of espresso for the true coffee lover.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="price fw-bold mb-0 fs-4">$5.00</p>
@@ -130,14 +193,15 @@
               </div>
             </div>
           </div>
-          <div class="col-lg mb-4">
+
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="card shadow">
               <img src="./assets/Latte.jpg" class="card-img-top" alt="Latte" />
               <div class="card-body">
                 <h5 class="card-title fw-bolder">Latte</h5>
                 <p class="card-text">
-                  A creamy blend of espresso and steamed milk, topped with light
-                  froth for a smooth and rich flavor experience.
+                  A creamy, smooth latte crafted with precision for a perfect
+                  experience.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="price fw-bold mb-0 fs-4">$6.00</p>
@@ -146,14 +210,14 @@
               </div>
             </div>
           </div>
-          <div class="col-lg mb-4">
+
+          <div class="col-md-6 col-lg-3 mb-4">
             <div class="card shadow">
               <img src="./assets/Mocha.jpg" class="card-img-top" alt="Mocha" />
               <div class="card-body">
                 <h5 class="card-title fw-bolder">Mocha</h5>
                 <p class="card-text">
-                  A delightful blend of rich espresso and steamed milk, infused
-                  with chocolate for a sweet experience.
+                  A mocha crafted with rich espresso and infused with chocolate.
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="price fw-bold mb-0 fs-4">$7.00</p>
@@ -165,6 +229,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Testimonials Section -->
     <section class="testimonials bg-beans text-beige py-5">
       <div class="container">
         <h2 class="text-center mb-4">What Our Customers Say</h2>
@@ -174,21 +240,21 @@
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <p class="text-center">
-                "This is an amazing service. Highly recommend!" - Jack
+            <div class="carousel-item active text-center">
+              <p class="fs-4">
+                "Best coffee I've ever had. The ambiance is just perfect. - John
+                Doe"
               </p>
             </div>
-            <div class="carousel-item">
-              <p class="text-center">
-                "Best cappuccino in town! I always start my mornings here." -
-                Sarah
+            <div class="carousel-item text-center">
+              <p class="fs-4">
+                "A must-visit place for all coffee lovers. - Jane Smith"
               </p>
             </div>
-            <div class="carousel-item">
-              <p class="text-center">
-                "Friendly staff, cozy vibes, and delicious espresso. Highly
-                recommended!" - Emma
+            <div class="carousel-item text-center">
+              <p class="fs-4">
+                "Incredible service and absolutely delicious coffee! - Michael
+                Brown"
               </p>
             </div>
           </div>
@@ -198,8 +264,7 @@
             data-bs-target="#testimonialsCarousel"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon"></span>
           </button>
           <button
             class="carousel-control-next"
@@ -207,8 +272,7 @@
             data-bs-target="#testimonialsCarousel"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon"></span>
           </button>
         </div>
       </div>
@@ -216,17 +280,17 @@
     <section class="bg-beige py-5">
       <div class="container">
         <h2 class="text-center text-beans text-capitalize fw-bolder py-4">
-          About Coffee shop
+          About Coffee Shop
         </h2>
         <p class="text-center text-teal fw-bold fs-3">
           Crafting the perfect cup, one bean at a time.
         </p>
         <div class="row">
-          <div class="col-md-6 pt-4">
+          <div class="col-lg-6 col-md-12 pt-4">
             <iframe
               id="location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d388912.34805827367!2d-4.302981710937498!3d40.400482399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227fae7af7ee1%3A0xbb45d906954a8e3e!2sSanro%20take%20away%20Coffee%20bar%20bakery!5e0!3m2!1sen!2sdz!4v1727721273231!5m2!1sen!2sdz"
-              width="600"
+              width="100%"
               height="350"
               style="
                 border: 2px solid #28130d;
@@ -238,7 +302,7 @@
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div class="col-md-6 pt-4">
+          <div class="col-lg-6 col-md-12 pt-4">
             <p class="text-beans fs-5" id="about">
               At Coffee Haven, we believe that coffee is more than just a drink
               – it's a way to connect, relax, and enjoy the moment. Since our
@@ -268,9 +332,13 @@
       </div>
     </section>
 
-    <footer class="text-center py-4 bg-beige text-">
+    <!-- Footer Section -->
+    <footer class="bg-beige text-center py-4">
       <div class="container">
-        <p>Follow us on:</p>
+        <!-- <p class="mb-0 text-beans fw-bold">
+          &copy; 2024 Coffee Haven. All rights reserved.
+        </p> -->
+        <p class="mb-0 text-beans fw-bold">Follow us on social media</p>
         <div class="social-icons">
           <a href="#" class="icon">
             <i class="bx bxl-facebook"></i>
@@ -282,7 +350,7 @@
             <i class="bx bxl-instagram"></i>
           </a>
 
-          <p>&copy; 2024 Coffee Haven. All rights reserved.</p>
+          <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
           <a class="ftr" href="#about">About Us</a> |
           <a class="ftr" href="#contact">Contact</a>
         </div>
