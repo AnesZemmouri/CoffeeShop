@@ -92,9 +92,9 @@
   color: #28130d; /* Change to your desired color */
 }
 
-.social-icons .icon:hover {
-  color: #hoverColor; /* Change color on hover */
-}
+/* .social-icons .icon:hover {
+  color: #hoverColor; 
+} */
 .ftr {
   color: teal;
 }
